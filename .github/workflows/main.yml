@@ -39,6 +39,8 @@ jobs:
         if: matrix.module == 'stan'
       - name: Run the tests
         run: doit tests:${{ matrix.module }}
+        env:
+          STAN_NOOPT: "true"
       - name: Lint the code
         run: doit lint:${{ matrix.module }}
   docs:
