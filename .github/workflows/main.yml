@@ -39,6 +39,7 @@ jobs:
         if: matrix.module == 'stan'
       - name: Run the tests
         run: doit tests:${{ matrix.module }}
+        if: matrix.module != 'root'
       - name: Lint the code
         run: doit lint:${{ matrix.module }}
       - name: Build the package
