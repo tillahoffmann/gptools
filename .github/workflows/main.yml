@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        module: ["stan", "torch", "util"]
+        module: ["root", "stan", "torch", "util"]
     name: Package tests and linting
     runs-on: "ubuntu-latest"
     steps:

@@ -1,0 +1,4 @@
+-e file:gptools-root[tests]
+-e file:gptools-stan
+-e file:gptools-torch
+-e file:gptools-util
