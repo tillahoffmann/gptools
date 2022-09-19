@@ -20,8 +20,44 @@
     #   gp-tools
     #   gp-tools-stan
     #   gp-tools-torch
+bleach==5.0.1
+    # via readme-renderer
+certifi==2022.9.14
+    # via requests
+charset-normalizer==2.1.1
+    # via requests
+cloudpickle==2.2.0
+    # via doit
 cmdstanpy==1.0.7
     # via gp-tools-stan
+colorama==0.4.5
+    # via doit-interface
+commonmark==0.9.1
+    # via rich
+docutils==0.17.1
+    # via
+    #   -r gptools-root/test_requirements.in
+    #   readme-renderer
+doit==0.36.0
+    # via doit-interface
+doit-interface==0.1.8
+    # via gp-tools
+flake8==5.0.4
+    # via gp-tools
+idna==3.4
+    # via requests
+importlib-metadata==4.12.0
+    # via
+    #   doit
+    #   twine
+jaraco-classes==3.2.2
+    # via keyring
+keyring==23.9.3
+    # via twine
+mccabe==0.7.0
+    # via flake8
+more-itertools==8.14.0
+    # via jaraco-classes
 numpy==1.23.3
     # via
     #   cmdstanpy
@@ -31,17 +67,51 @@ numpy==1.23.3
     #   pandas
 pandas==1.5.0
     # via cmdstanpy
+pkginfo==1.8.3
+    # via twine
+pycodestyle==2.9.1
+    # via flake8
+pyflakes==2.5.0
+    # via flake8
+pygments==2.13.0
+    # via
+    #   readme-renderer
+    #   rich
 python-dateutil==2.8.2
     # via pandas
 pytz==2022.2.1
     # via pandas
+readme-renderer==37.1
+    # via twine
+requests==2.28.1
+    # via
+    #   requests-toolbelt
+    #   twine
+requests-toolbelt==0.9.1
+    # via twine
+rfc3986==2.0.0
+    # via twine
+rich==12.5.1
+    # via twine
 six==1.16.0
-    # via python-dateutil
+    # via
+    #   bleach
+    #   python-dateutil
 torch==1.12.1
     # via gp-tools-torch
 tqdm==4.64.1
     # via cmdstanpy
+twine==4.0.1
+    # via gp-tools
 typing-extensions==4.3.0
     # via torch
 ujson==5.5.0
     # via cmdstanpy
+urllib3==1.26.12
+    # via
+    #   requests
+    #   twine
+webencodings==0.5.1
+    # via bleach
+zipp==3.8.1
+    # via importlib-metadata

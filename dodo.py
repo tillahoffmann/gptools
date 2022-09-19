@@ -4,7 +4,7 @@ import pathlib
 
 manager = di.Manager.get_instance()
 
-modules = ["stan", "torch", "util"]
+modules = ["root", "stan", "torch", "util"]
 requirements_txt = []
 for module in modules:
     # Generate requirement files.

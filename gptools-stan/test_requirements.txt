@@ -191,7 +191,7 @@ packaging==21.3
     #   nbconvert
     #   pytest
     #   qtpy
-pandas==1.4.4
+pandas==1.5.0
     # via cmdstanpy
 pandocfilters==1.5.0
     # via nbconvert

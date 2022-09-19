@@ -14,7 +14,11 @@ setup(
         "gp-tools-torch",
         "gp-tools-util",
     ],
-    tests_require=[
-        "twine",
-    ],
+    extras_require={
+        "tests": [
+            "doit-interface",
+            "flake8",
+            "twine",
+        ],
+    },
 )

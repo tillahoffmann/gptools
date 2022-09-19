@@ -2,3 +2,4 @@
 -e file:gptools-stan
 -e file:gptools-torch
 -e file:gptools-util
+docutils<0.18  # Required for sphinx-rtd-theme.
