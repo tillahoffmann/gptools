@@ -62,6 +62,8 @@ doit-interface==0.1.8
     # via gp-tools-util
 entrypoints==0.4
     # via jupyter-client
+execnet==1.9.0
+    # via pytest-xdist
 executing==1.1.0
     # via stack-data
 fastjsonschema==2.16.2
@@ -213,7 +215,9 @@ ptyprocess==0.7.0
 pure-eval==0.2.2
     # via stack-data
 py==1.11.0
-    # via pytest
+    # via
+    #   pytest
+    #   pytest-forked
 pycodestyle==2.9.1
     # via flake8
 pycparser==2.21
@@ -238,7 +242,13 @@ pytest==7.1.3
     # via
     #   gp-tools-util
     #   pytest-cov
+    #   pytest-forked
+    #   pytest-xdist
 pytest-cov==3.0.0
+    # via gp-tools-util
+pytest-forked==1.4.0
+    # via pytest-xdist
+pytest-xdist==2.5.0
     # via gp-tools-util
 python-dateutil==2.8.2
     # via

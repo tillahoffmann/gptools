@@ -24,6 +24,7 @@ setup(
             "matplotlib",
             "pytest",
             "pytest-cov",
+            "pytest-xdist",
             "scipy",
             "tabulate",
             "twine",

@@ -21,6 +21,7 @@ setup(
             "networkx",
             "pytest",
             "pytest-cov",
+            "pytest-xdist",
             "scipy",
             "torch",
             "twine",
