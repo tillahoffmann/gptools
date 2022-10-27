@@ -230,6 +230,13 @@ exceptiongroup==1.0.0rc9
     #   -r gptools-torch/test_requirements.txt
     #   -r gptools-util/test_requirements.txt
     #   pytest
+execnet==1.9.0
+    # via
+    #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
+    #   pytest-xdist
 executing==1.1.1
     # via
     #   -r doc_requirements.txt
@@ -753,7 +760,14 @@ pytest==7.2.0
     #   -r gptools-torch/test_requirements.txt
     #   -r gptools-util/test_requirements.txt
     #   pytest-cov
+    #   pytest-xdist
 pytest-cov==4.0.0
+    # via
+    #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
+pytest-xdist==3.0.2
     # via
     #   -r doc_requirements.txt
     #   -r gptools-stan/test_requirements.txt

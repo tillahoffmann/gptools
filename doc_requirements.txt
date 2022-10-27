@@ -91,6 +91,8 @@ entrypoints==0.4
     # via jupyter-client
 exceptiongroup==1.0.0rc9
     # via pytest
+execnet==1.9.0
+    # via pytest-xdist
 executing==1.1.1
     # via stack-data
 fastjsonschema==2.16.2
@@ -342,7 +344,13 @@ pytest==7.2.0
     #   gp-tools-torch
     #   gp-tools-util
     #   pytest-cov
+    #   pytest-xdist
 pytest-cov==4.0.0
+    # via
+    #   gp-tools-stan
+    #   gp-tools-torch
+    #   gp-tools-util
+pytest-xdist==3.0.2
     # via
     #   gp-tools-stan
     #   gp-tools-torch

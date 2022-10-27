@@ -38,7 +38,7 @@ def assert_stan_python_allclose(
         stan_function: str, arg_types: dict[str, str], arg_values: dict[str, np.ndarray],
         result_type: str, desired: Union[np.ndarray, list[np.ndarray]], atol: float = 1e-8,
         includes: Optional[Iterable[str]] = None, line_info: Optional[str] = "???",
-        suffix: Optional[str] = None) -> None:
+        suffix: Optional[str] = None, worker_id: str = "") -> None:
     """
     Assert that a Stan and Python function return the same result up to numerical inaccuracies.
     """
@@ -58,7 +58,9 @@ def assert_stan_python_allclose(
     ])
 
     # Write to file if it does not already exist.
-    digest = hashlib.sha256(code.encode()).hexdigest()
+    digest = hashlib.sha256(code.encode())
+    digest.update(worker_id.encode())
+    digest = digest.hexdigest()
     path = pathlib.Path(".cmdstanpy_cache", digest).with_suffix(".stan")
     if not path.is_file():
         path.parent.mkdir(exist_ok=True)
@@ -423,5 +425,5 @@ for m in [7, 8]:
 
 
 @pytest.mark.parametrize("config", CONFIGURATIONS, ids=get_configuration_ids())
-def test_stan_python_equal(config: dict) -> None:
-    assert_stan_python_allclose(**config)
+def test_stan_python_equal(config: dict, worker_id: str) -> None:
+    assert_stan_python_allclose(**config, worker_id=worker_id)
