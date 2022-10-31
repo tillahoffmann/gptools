@@ -1,6 +1,11 @@
+from myst_parser.config.main import MdParserConfig
+from myst_nb.core.config import NbParserConfig
+from myst_nb.core.read import create_nb_reader, NbReader
+from nbconvert.preprocessors import ExecutePreprocessor
 import numpy as np
+import pathlib
 import pytest
-from typing import Type
+from typing import Any, Iterable, Type
 from .kernels import ExpQuadKernel, HeatKernel, Kernel
 from . import coordgrid, ArrayOrTensor
 
@@ -66,3 +71,28 @@ _kernel_configurations = [
 @pytest.fixture(params=_kernel_configurations)
 def kernel_configuration(request: pytest.FixtureRequest) -> KernelConfiguration:
     return request.param
+
+
+def run_myst_notebook(path: str, timeout: float = 60) -> Any:
+    """
+    Run a myst example notebook.
+    """
+    md_config = MdParserConfig()
+    nb_config = NbParserConfig()
+    with open(path) as fp:
+        content = fp.read()
+    reader: NbReader = create_nb_reader(path, md_config, nb_config, content)
+    notebook = reader.read(content)
+    preprocessor = ExecutePreprocessor(timeout=timeout)
+    return preprocessor.preprocess(notebook, {"metadata": {"path": pathlib.Path(path).parent}})
+
+
+def discover_myst_notebooks(package) -> Iterable[str]:
+    """
+    Discover example notebooks within a package.
+    """
+    return [
+        str(path.relative_to(pathlib.Path.cwd())) for path in
+        pathlib.Path(package.__file__).parent.parent.parent.glob("**/*.md")
+        if ".ipynb_checkpoints" not in path.parts
+    ]
