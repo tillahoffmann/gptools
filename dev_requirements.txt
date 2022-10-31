@@ -23,6 +23,9 @@
 alabaster==0.7.12
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 anyio==3.6.2
     # via
@@ -74,6 +77,9 @@ attrs==22.1.0
 babel==2.10.3
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 backcall==0.2.0
     # via
@@ -123,6 +129,9 @@ charset-normalizer==2.1.1
 click==8.1.3
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   jupyter-cache
     #   pip-tools
 cloudpickle==2.2.0
@@ -268,6 +277,9 @@ idna==3.4
 imagesize==1.4.1
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 importlib-metadata==5.0.0
     # via
@@ -367,6 +379,9 @@ jupyter==1.0.0
 jupyter-cache==0.5.0
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   myst-nb
 jupyter-client==7.4.4
     # via
@@ -440,6 +455,9 @@ kiwisolver==1.4.4
 markdown-it-py==2.1.0
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   mdit-py-plugins
     #   myst-parser
 markupsafe==2.1.1
@@ -474,10 +492,16 @@ mccabe==0.7.0
 mdit-py-plugins==0.3.1
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   myst-parser
 mdurl==0.1.2
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   markdown-it-py
 mistune==2.0.4
     # via
@@ -498,10 +522,17 @@ mpmath==1.2.1
     #   -r doc_requirements.txt
     #   -r gptools-util/test_requirements.txt
 myst-nb==0.17.1
-    # via -r doc_requirements.txt
+    # via
+    #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
 myst-parser==0.18.1
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   myst-nb
 nbclassic==0.4.5
     # via
@@ -772,11 +803,16 @@ pytz==2022.5
     # via
     #   -r doc_requirements.txt
     #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   babel
     #   pandas
 pyyaml==6.0
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   jupyter-cache
     #   myst-nb
     #   myst-parser
@@ -877,6 +913,9 @@ sniffio==1.3.0
 snowballstemmer==2.2.0
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 soupsieve==2.3.2.post1
     # via
@@ -888,6 +927,9 @@ soupsieve==2.3.2.post1
 sphinx==5.3.0
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   myst-nb
     #   myst-parser
     #   sphinx-rtd-theme
@@ -899,30 +941,51 @@ sphinx-stan==0.1.5
 sphinxcontrib-applehelp==1.0.2
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 sphinxcontrib-devhelp==1.0.2
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 sphinxcontrib-htmlhelp==2.0.0
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 sphinxcontrib-jsmath==1.0.1
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 sphinxcontrib-qthelp==1.0.3
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   sphinx
 sqlalchemy==1.4.42
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
+    #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   jupyter-cache
 stack-data==0.5.1
     # via
@@ -936,6 +999,7 @@ tabulate==0.9.0
     #   -r doc_requirements.txt
     #   -r gptools-stan/test_requirements.txt
     #   -r gptools-torch/test_requirements.txt
+    #   -r gptools-util/test_requirements.txt
     #   jupyter-cache
 terminado==0.17.0
     # via
@@ -1015,6 +1079,7 @@ twine==4.0.1
 typing-extensions==4.4.0
     # via
     #   -r doc_requirements.txt
+    #   -r gptools-stan/test_requirements.txt
     #   -r gptools-torch/test_requirements.txt
     #   -r gptools-util/test_requirements.txt
     #   myst-nb

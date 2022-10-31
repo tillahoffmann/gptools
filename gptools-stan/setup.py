@@ -20,6 +20,7 @@ setup(
         "tests": [
             "doit-interface",
             "flake8",
+            "myst-nb",
             "jupyter",
             "matplotlib",
             "pytest",

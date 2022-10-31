@@ -6,6 +6,8 @@
 #
 -e file:gptools-util
     # via -r gptools-util/test_requirements.in
+alabaster==0.7.12
+    # via sphinx
 anyio==3.6.2
     # via jupyter-server
 appnope==0.1.3
@@ -24,7 +26,10 @@ asttokens==2.0.8
 attrs==22.1.0
     # via
     #   jsonschema
+    #   jupyter-cache
     #   pytest
+babel==2.10.3
+    # via sphinx
 backcall==0.2.0
     # via ipython
 beautifulsoup4==4.11.1
@@ -39,6 +44,8 @@ cffi==1.15.1
     # via argon2-cffi-bindings
 charset-normalizer==2.1.1
     # via requests
+click==8.1.3
+    # via jupyter-cache
 cloudpickle==2.2.0
     # via doit
 colorama==0.4.6
@@ -60,7 +67,9 @@ defusedxml==0.7.1
 docutils==0.17.1
     # via
     #   -r gptools-util/../shared_requirements.in
+    #   myst-parser
     #   readme-renderer
+    #   sphinx
 doit==0.36.0
     # via doit-interface
 doit-interface==0.1.8
@@ -81,9 +90,13 @@ idna==3.4
     # via
     #   anyio
     #   requests
+imagesize==1.4.1
+    # via sphinx
 importlib-metadata==5.0.0
     # via
     #   doit
+    #   jupyter-cache
+    #   myst-nb
     #   twine
 iniconfig==1.1.1
     # via pytest
@@ -92,6 +105,7 @@ ipykernel==6.16.2
     #   ipywidgets
     #   jupyter
     #   jupyter-console
+    #   myst-nb
     #   nbclassic
     #   notebook
     #   qtconsole
@@ -100,6 +114,7 @@ ipython==8.5.0
     #   ipykernel
     #   ipywidgets
     #   jupyter-console
+    #   myst-nb
 ipython-genutils==0.2.0
     # via
     #   nbclassic
@@ -114,13 +129,17 @@ jedi==0.18.1
 jinja2==3.1.2
     # via
     #   jupyter-server
+    #   myst-parser
     #   nbclassic
     #   nbconvert
     #   notebook
+    #   sphinx
 jsonschema==4.16.0
     # via nbformat
 jupyter==1.0.0
     # via gp-tools-util
+jupyter-cache==0.5.0
+    # via myst-nb
 jupyter-client==7.4.4
     # via
     #   ipykernel
@@ -153,6 +172,10 @@ keyring==23.9.3
     # via twine
 kiwisolver==1.4.4
     # via matplotlib
+markdown-it-py==2.1.0
+    # via
+    #   mdit-py-plugins
+    #   myst-parser
 markupsafe==2.1.1
     # via
     #   jinja2
@@ -165,17 +188,27 @@ matplotlib-inline==0.1.6
     #   ipython
 mccabe==0.7.0
     # via flake8
+mdit-py-plugins==0.3.1
+    # via myst-parser
+mdurl==0.1.2
+    # via markdown-it-py
 mistune==2.0.4
     # via nbconvert
 more-itertools==9.0.0
     # via jaraco-classes
 mpmath==1.2.1
     # via gp-tools-util
+myst-nb==0.17.1
+    # via gp-tools-util
+myst-parser==0.18.1
+    # via myst-nb
 nbclassic==0.4.5
     # via notebook
 nbclient==0.5.13
     # via
     #   -r gptools-util/../shared_requirements.in
+    #   jupyter-cache
+    #   myst-nb
     #   nbconvert
 nbconvert==7.2.2
     # via
@@ -185,7 +218,9 @@ nbconvert==7.2.2
     #   notebook
 nbformat==5.7.0
     # via
+    #   jupyter-cache
     #   jupyter-server
+    #   myst-nb
     #   nbclassic
     #   nbclient
     #   nbconvert
@@ -217,6 +252,7 @@ packaging==21.3
     #   nbconvert
     #   pytest
     #   qtpy
+    #   sphinx
 pandocfilters==1.5.0
     # via nbconvert
 parso==0.8.3
@@ -262,6 +298,7 @@ pygments==2.13.0
     #   qtconsole
     #   readme-renderer
     #   rich
+    #   sphinx
 pyparsing==3.0.9
     # via
     #   matplotlib
@@ -278,6 +315,13 @@ python-dateutil==2.8.2
     # via
     #   jupyter-client
     #   matplotlib
+pytz==2022.5
+    # via babel
+pyyaml==6.0
+    # via
+    #   jupyter-cache
+    #   myst-nb
+    #   myst-parser
 pyzmq==24.0.1
     # via
     #   ipykernel
@@ -295,6 +339,7 @@ readme-renderer==37.2
 requests==2.28.1
     # via
     #   requests-toolbelt
+    #   sphinx
     #   twine
 requests-toolbelt==0.10.1
     # via twine
@@ -316,10 +361,32 @@ six==1.16.0
     #   python-dateutil
 sniffio==1.3.0
     # via anyio
+snowballstemmer==2.2.0
+    # via sphinx
 soupsieve==2.3.2.post1
     # via beautifulsoup4
+sphinx==5.3.0
+    # via
+    #   myst-nb
+    #   myst-parser
+sphinxcontrib-applehelp==1.0.2
+    # via sphinx
+sphinxcontrib-devhelp==1.0.2
+    # via sphinx
+sphinxcontrib-htmlhelp==2.0.0
+    # via sphinx
+sphinxcontrib-jsmath==1.0.1
+    # via sphinx
+sphinxcontrib-qthelp==1.0.3
+    # via sphinx
+sphinxcontrib-serializinghtml==1.1.5
+    # via sphinx
+sqlalchemy==1.4.42
+    # via jupyter-cache
 stack-data==0.5.1
     # via ipython
+tabulate==0.9.0
+    # via jupyter-cache
 terminado==0.17.0
     # via
     #   jupyter-server
@@ -359,7 +426,10 @@ traitlets==5.5.0
 twine==4.0.1
     # via gp-tools-util
 typing-extensions==4.4.0
-    # via torch
+    # via
+    #   myst-nb
+    #   myst-parser
+    #   torch
 urllib3==1.26.12
     # via
     #   requests

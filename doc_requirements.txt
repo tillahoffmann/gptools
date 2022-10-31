@@ -154,7 +154,6 @@ jsonschema==4.16.0
     # via nbformat
 jupyter==1.0.0
     # via
-    #   -r doc_requirements.in
     #   gp-tools-stan
     #   gp-tools-torch
     #   gp-tools-util
@@ -223,7 +222,10 @@ more-itertools==9.0.0
 mpmath==1.2.1
     # via gp-tools-util
 myst-nb==0.17.1
-    # via -r doc_requirements.in
+    # via
+    #   gp-tools-stan
+    #   gp-tools-torch
+    #   gp-tools-util
 myst-parser==0.18.1
     # via myst-nb
 nbclassic==0.4.5

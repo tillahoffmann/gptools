@@ -19,6 +19,7 @@ setup(
             "jupyter",
             "matplotlib",
             "mpmath",
+            "myst-nb",
             "networkx",
             "pytest",
             "pytest-cov",
